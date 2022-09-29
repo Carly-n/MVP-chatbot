@@ -1,0 +1,50 @@
+{
+  "application_name": {
+    "searchPatterns": [
+      "cloudfoundry:$.application_name",
+      "env:K_SERVICE"
+    ]
+  },
+  "conversation_apikey": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.apikey",
+      "file:/server/localdev-config.json:$.conversation_apikey"
+    ]
+  },
+  "conversation_iam_apikey_description": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.iam_apikey_description",
+      "file:/server/localdev-config.json:$.conversation_iam_apikey_description"
+    ]
+  },
+  "conversation_iam_apikey_name": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.iam_apikey_name",
+      "file:/server/localdev-config.json:$.conversation_iam_apikey_name"
+    ]
+  },
+  "conversation_iam_role_crn": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.iam_role_crn",
+      "file:/server/localdev-config.json:$.conversation_iam_role_crn"
+    ]
+  },
+  "conversation_iam_serviceid_crn": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.iam_serviceid_crn",
+      "file:/server/localdev-config.json:$.conversation_iam_serviceid_crn"
+    ]
+  },
+  "conversation_url": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.url",
+      "file:/server/localdev-config.json:$.conversation_url"
+    ]
+  },
+  "conversation_serviceInfo": {
+    "searchPatterns": [
+      "cloudfoundry:$['conversation'][0].credentials.serviceInfo",
+      "file:/server/localdev-config.json:$.conversation_serviceInfo"
+    ]
+  }
+}

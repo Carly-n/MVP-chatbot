@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Tips</title>
+    <style>
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+        
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+        
+        button.chatLauncher {
+          animation-duration: 0.5s;
+          transition-duration: 0.5s;
+          position: fixed;
+          bottom: 32px;
+          right: 32px;
+          z-index: 9999;
+          border: 4px solid #2e73c7;
+          padding: 1em;
+          border-radius: 8px;
+          margin: 0;
+          text-decoration: none;
+          background-color: #09fde9;
+          color: rgb(0, 0, 01);
+          font-family: sans-serif;
+          font-size: 1rem;
+          cursor: pointer;
+          text-align: center;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 100px;
+          opacity: 0;
+        }
+    
+        button.chatLauncher.open {
+          animation-name: slideInRight;
+          opacity: 1;
+        }
+    
+        button.chatLauncher:hover,
+        button.chatLauncher:focus {
+          background-color: rgb(225, 225, 254);
+          border: 4px solid #0053ba;
+        }
+        
+        button.chatLauncher:focus {
+          outline: 1px solid #0053ba;
+          outline-offset: -4px;
+        }
+      </style>
+<style>
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<img src="https://thumbs.dreamstime.com/b/web-148145829.jpg" 
+
+" 
+    width=500
+    height=250
+    class="center"
+    style="padding: 100px 0px 50px; float: right;"
+    >
+     
+    <style>#flex-header,body,main ul{-webkit-box-direction:normal}
+      body{
+        background-color:rgb(41, 50, 65);
+        font-family:IBMPlexSans; 
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:vertical;
+        -ms-flex-direction:column;
+        flex-direction:column;
+        padding:10 20px
+        } 
+
+    
+        h1,h2{
+          color:#ffffff;
+          text-align:center
+          }
+          h1{
+            margin: auto;
+            font-size:2em
+            }
+            #flex-header,main ul{
+              -webkit-box-pack:center;
+              -ms-flex-pack:center;
+              justify-content:center
+              }
+              #flex-header,main .cloud-links,main .cloud-links li
+              {
+                display:-webkit-box;display:-ms-flexbox;display:flex
+                }
+                #flex-header{
+                  -webkit-box-orient:vertical;
+                  -ms-flex-flow:column;
+                  flex-flow:column
+                  }
+                  main ul,main ul li{
+                    -webkit-box-align:baseline;
+                    -ms-flex-align:baseline;
+                    align-items:baseline
+                    }
+                    .cloud-links{
+                      -webkit-box-orient:horizontal;
+                      -ms-flex-flow:row wrap;
+                      flex-flow:row wrap;
+                      list-style:none;padding-left:10%
+                      }
+                      @media screen and (min-width:900px){
+                        main{width:700px;
+                        margin:auto
+                        }
+                        }
+                        .cloud-description{
+                          border:3px solid rgb(46, 115, 199);
+                          padding:0 0 0 0
+                          }
+                          background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAALCAYAAACUPhZAAAACn3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjanVRbkiUpCP13Fb0EQURdji8iZgez/DmY3uq6FdUVHYORKQnI44AZ9r//WPjlVEmD5FK1qUaQNGncwdT4kPMDD+NZj6hqfBHFdt6HApUP8ZviOPBP/iK/O/UvjuRGp/GueMm5fnHEz5Y8AHiS66hdhhLE30TWVkuU39/9BrBbopYsWksOupQ5psT7PPJESzFRKqnjTXi73iUCPh85J3d4nCE64AnxZpT8OCcg1cgVL/kpIF3kP8lPKFcALPcVvpYS+VF8gPpqRnqXv5rxonDSS1CnT0b6fWd+akz4qTOnrE9Ai1yO3+U7Rwqf0zNb1WwfC+miGFC9E/Yqnq4dChOvIaMS8RXA5IfF7ksB6cRsl7sMaAzkO4miEWP57pRIaVLBLtQD5SOs0FfqtLDsrESFmYWZNgsObMj2Ry50w5YTeMcaEHvDSOBMaP//Ff7W0Gw6RHQu9DhjgbzY2+LFAuzkG8zQBaq3Jyn+ROXgWZ8zXA7+5JNNB/lnbt/pmWocI7dWhGbK7PNfhIQz0K4OKlyGkyTdofwzXZc383UcP5nf/MO3R+IpGB3rNE7E5b+4eYM5Jq6PySCcI4/BGobmVWZpstXmGkRZLSlp17xLm3HobNZzBt5T++QxVLJIbntKK6lsnbNJ1dCm9CVzTBtjYSBiSYtxwEfH8tRWRktWltQ+G9tMg+rC/wYmeSMJGXX12iXgnmHMmw9xTTaWdhm9U+tti62G1NbcppapDqNeVBbp2tWibu5aRpyGq8ABqdbcW1kc62wZidfYee1SDVgZp2UTKRicLZ68FZANGtLqnqOpcW2FVqGQGxdDLjHhhiRpsw3iievFjMFXXFu/83W3Bsj9B/YfjhF4Fd3teakAAAAEc0JJVAgICAh8CGSIAAABr0lEQVQoka2ST0gUYRjGn/f7vpndcdZRgzVDooNKkUGHILxFZ6FTozdPERS4YB7UQ4yL7cWO2V8PUkGH6ezJQ4ReIzrUxayIQLHF1c2anZlv5u1gikHUoD3Hl5ff8zzwAP9BnseCmenQoF3I2MOVltLj7fHRp1v9+032/9Lu8V3vczrtuvwv+OojyFob0uLm51P5QvtriLzBYX3asZyp8gBtX/BYvSyT3oMfVDf96Ny3iGdImH1p/GPRsTAyNWC/+i156f56j6HCzoSjxIDKBNZMQstG3aamzkDYt1jZZ5FENSn1hPP+y9zkZG+srt1dPi5bmxdkrniCA0YqspUhADkJhAkQf9+IdVCNSZhtVsF5EJw8tkREb1W1kat2S30niYIzIk0iQjY6Mwg6pZyiOgQupSrfZZgmJIfTVnhkxfM4Y8y/aOzZ5nBDGxUiSbbJNyqD1uwve1IA4Poss8LWi6D2r+DzjTf5NdFzjwpNQ2Ir+mRw7WplsGPB9Vn6LlIiOsDwmQlEXJpdO2oUnPlEo95iRVfKl1s/eC9YlS/uzPDQuj7zseP2k1UbAPw/tP8JGbirMg8+zmoAAAAASUVORK5CYII=") no-repeat
+
+                          .right-arrow{
+                            width:25px;
+                            height:10px;
+                            padding-right:5px
+                            }
+                            main ul li{
+                              -ms-flex-preferred-size:90%;
+                              flex-basis:90%;
+                              padding:5px;
+                              flex-grow:1;
+                              -webkit-box-flex:1;
+                              -ms-flex-positive:1
+                              }
+                              @media screen and (min-width:600px){
+                                main ul li{
+                                  -ms-flex-preferred-size:45%;
+                                  flex-basis:45%
+                                  }
+                                  }
+                                  main ul li a{
+                                    text-decoration:underline;font-size:1em
+                                    }
+                                    .cloud-header,.sad-cloud{
+                                      height:200px;
+                                      background-size:contain
+                                      }
+                                      
+                                        @media screen and (max-width:400px){
+                                          .cloud-header,.sad-cloud{
+                                            display:none
+                                            }
+                                            h1{
+                                              padding-top:100px
+                                              }
+                                              }
+                                              #error-container{
+                                                margin:0 auto;
+                                                width:70%
+                                                }
+                                                #error-container a,main ul li a{
+                                                  color:#6b95c4
+                                                  }
+                                                  #error-container h1{
+                                                    color:#000;
+                                                    font-size:4em
+                                                    }
+                                                    #error-container h2{
+                                                      color:#000
+                                                      }
+            </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header id="flex-header">
+    <div>
+    <h1 style="color:rgb(255, 255, 255)">Travel Tips!</h1>
+    <h2 style="color:rgb(0, 83, 186)"> Com a ajuda do IBM Watson®</h2>
+      </div>
+
+</header>
+<main>
+    <div class="cloud-description">
+        <h2 style="color:rgb(30, 167, 230); text-align: center">
+          Viaje do seu jeito!
+        </h2>
+        
+
+        <h3 style="color:rgb(27, 150, 172); text-align: center">
+          Conheça novos lugares pelos calendários de atrações culturais e esportivas.
+        </h3>
+        <h3 style="color:rgb(26, 179, 206); text-align: center">Você pode escolher pelo:</h3>
+        <h4 style=text-align:center >
+            <li style="color:rgb(26, 194, 206)">
+                <b>mês:</b> campeonatos esportivos
+            </li>
+            <li style="color:rgb(18, 218, 233)">
+                <b>evento:</b> festividades e celebrações
+            </li>
+          </h4>
+        <h2 style="color:rgb(9, 253, 233)">
+            Fale com <b>Charley</b> e já comece a viajar!
+        </h2>
+    </div>
+    <button type="button" class="chatLauncher"  style="display:none;">
+        <div>
+          <strong>Fale com Charley</strong> 
+        </div>
+      </button>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "06c4e25c-99d7-4120-b592-affc626cf127", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "e4c9c338-ab7d-494d-b90e-9c120a145c3d", // The ID of your service instance.
+          showLauncher: false,
+          onLoad: function(instance) { 
+              // Select the button element from the page.
+            const button = document.querySelector('.chatLauncher');
+            //instance.render(); }
+            // Add the event listener to open your web chat.
+            button.addEventListener('click', function clickListener() {
+            instance.openWindow();
+
+        });
+        // Render the web chat. Nothing appears on the page, because the launcher is
+      // hidden and the web chat window is closed by default.
+        instance.render().then(function() {
+        // Now that web chat has been rendered (but is still closed), we make the
+        // custom launcher button visible.
+            button.style.display = 'block';
+            button.classList.add('open');
+        });
+    }
+};
+            setTimeout(function(){const t=document.createElement('script');t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";document.head.appendChild(t);});
+    
+      </script>
+      
+</main>
+</body>
+</html>
+

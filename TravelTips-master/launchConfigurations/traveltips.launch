@@ -1,0 +1,14 @@
+{
+  "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
+  "Params": {
+    "Target": {
+      "Url": "https://api.us-south.cf.cloud.ibm.com",
+      "Org": "Carla.Nejm@ibm.com",
+      "Space": "dev"
+    },
+    "Name": "traveltips",
+    "Instrumentation": {}
+  },
+  "Path": "manifest.yml",
+  "Type": "Cloud Foundry"
+}
